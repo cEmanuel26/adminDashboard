@@ -1,0 +1,364 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.mainGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.dashboard {
+  height: 100vh;
+  width: 15vw;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: #1c91d3;
+  color: white;
+}
+.sidebar {
+  height: 100vh;
+  width: 85vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  float: right;
+}
+.sidebar .header {
+  height: 20vh;
+  width: 85vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  color: white;
+  font-weight: bold;
+  position: absolute;
+  top: 0;
+  text-align: center;
+}
+.mainContent {
+  height: 80vh;
+  width: 85vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #e1e7f0;
+  position: absolute;
+  top: 20vh;
+}
+.projects {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+  height: 80vh;
+  width: 60vw;
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding-top: 80px;
+  padding-bottom: 16px;
+}
+.projectCard {
+  height: 200px;
+  width: 390px;
+  margin: 0 auto;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+.rightContent {
+  height: 80vh;
+  width: 25vw;
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto; /* Ensure content is scrollable if it overflows */
+  padding-top: 70px;
+  padding-bottom: 30px;
+}
+.announcements {
+  height: 400px;
+  width: 80%;
+  background-color: white;
+  margin: 10px auto;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+  display: flex; /* Ensure content inside is aligned properly */
+}
+
+.trending {
+  height: 400px;
+  width: 80%;
+  background-color: white;
+  margin: 10px auto;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+  display: flex; /* Ensure content inside is aligned properly */
+}
+.dashboardHeader {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  margin: 0 auto;
+  display: block;
+}
+.dashboardHeader h2 {
+  color: white;
+  padding-right: 60px;
+}
+
+.dashboardHeader img {
+  width: 200px;
+  height: 50px;
+  margin-top: 20px;
+  filter: brightness(0) invert(1);
+}
+
+.nav-bar {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  margin: 0 auto;
+}
+
+.nav-bar .nav-item > img {
+  height: 30px;
+  width: 30px;
+  filter: brightness(0) invert(1);
+}
+.nav-item {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  padding: 10px 0;
+}
+.bottomNav {
+  margin-top: 40px;
+}
+.nav-item span {
+  display: flex;
+  align-items: center;
+  margin-left: -40px;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+.nav-item span a {
+  text-decoration: none;
+  color: white;
+}
+.sidebar .header {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+}
+
+.first-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  font-size: 0.5rem;
+  width: 85vw;
+  margin-top: 20px;
+  margin-left: 5vw;
+}
+.first-row img,
+.second-row img {
+  height: 20px;
+  width: 20px;
+}
+.second-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  font-size: 0.5rem;
+  width: 85vw;
+}
+.search-bar {
+  align-self: center;
+  margin-left: 30px;
+}
+.search-bar input {
+  width: 55vw;
+  height: 30px;
+  border-radius: 15px;
+  border: none;
+  background-color: #e1e7f0;
+  text-align: center;
+}
+.search-bar img {
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  margin-left: -30px;
+  margin-top: 5px;
+  align-self: center;
+}
+.account {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  width: 15vw;
+  margin-left: auto;
+  margin-right: 90px;
+}
+.account #account {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+}
+.account p {
+  margin-left: 20px;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  color: black;
+}
+
+.account img {
+  height: 20px;
+  width: 20px;
+  align-self: center;
+}
+
+.accountLogo {
+  display: grid;
+  width: 5vw;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+}
+.accountLogo img {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  margin-left: 5vw;
+  margin-right: 15px;
+}
+.accountWelcome p {
+  font-size: 1rem;
+  color: black;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.welcomeText {
+  text-align: left;
+}
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  margin-left: auto;
+  gap: 20px;
+}
+.buttons button {
+  border-radius: 25px;
+  border: none;
+  background-color: #1c91d3;
+  color: white;
+  width: 85px;
+  height: 40px;
+  cursor: pointer;
+  font-weight: bolder;
+  font-size: 1rem;
+}
+
+.mainContent .mainContentText {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  margin: 20px 20px;
+}
+.projectCard {
+  border-left: 10px solid #f0b22f;
+  background-color: white;
+  display: grid;
+}
+.projectCard p {
+  font-size: 0.8rem;
+  font-weight: bold;
+  margin-left: 20px;
+  color: #676767;
+}
+.projectCard h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+.projectCardButtons {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  justify-self: end;
+  align-self: end;
+  margin-bottom: 10px;
+  margin-right: 20px;
+  gap: 20px;
+}
+.projectCardButtons button {
+  border: none;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  background-color: transparent;
+}
+.projectCardButtons button img {
+  width: 30px;
+  height: 30px;
+}
+
+.announcements {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
+.announcementCard {
+  padding: 20px 20px 0 20px;
+  font-size: 0.8rem;
+}
+.announcementCard p {
+  padding-bottom: 20px;
+  border-bottom: 1px solid #ccc;
+  color: #676767;
+}
+
+.trendingCard img {
+  width: 30px;
+  height: 30px;
+  margin-left: 20px;
+}
+.rightContent #header {
+  margin-left: 40px;
+  font-weight: 600;
+}
+.trending {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
+.trendingCard {
+  display: grid;
+  width: 170px;
+  gap: 20px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+.trendingCard div {
+  align-items: center;
+  width: 170px;
+}
+.trendingCard img {
+  width: 40px;
+  height: 40px;
+  margin-left: 20px;
+  align-self: center;
+}
+.trendingCard p {
+  font-size: 0.8rem;
+  color: #676767;
+}
